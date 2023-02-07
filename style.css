@@ -210,10 +210,10 @@ a:focus {
     gap: 2rem;
   }
   .lecture-info {
-    flex-direction: column;
+    /* flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
-    width: 100%;
+    width: 100%; */
   }
   .table-item {
     align-items: center;
