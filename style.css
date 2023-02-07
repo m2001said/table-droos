@@ -80,7 +80,7 @@ a:focus {
   padding: 1rem;
   gap: 1.5rem;
   /* width: 1300px; */
-  /* max-width: 1262px; */
+  max-width: 1262px;
   /* width: auto; */
   /* min-width: 400px; */
   /* justify-content: flex-start; */
@@ -94,7 +94,7 @@ a:focus {
   padding: 1.5rem 1rem;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
   gap: 1rem;
-  width: 100%;
+  width: 600px;
 }
 .table-item-day-lecture a {
   font-size: 1.3rem;
@@ -179,9 +179,12 @@ a:focus {
 /* --------media queries --------- */
 /**************************/
 @media (max-width: 1326px) {
-  /* .table-item-day-lecture {
-    width: 500px;
-  } */
+  .table-item-day-lecture {
+    width: 550px;
+  }
+  .table-item-day-lectures {
+    max-width: 1162px;
+  }
 }
 
 /**************************/
@@ -199,6 +202,9 @@ a:focus {
 /* --------media queries --------- */
 /**************************/
 @media (max-width: 600px) {
+  .table-item-day-lecture {
+    width: 100%;
+  }
   .table {
     padding: 4rem 1rem;
     gap: 2rem;
