@@ -186,7 +186,14 @@ a:focus {
     max-width: 1162px;
   }
 }
-
+@media (max-width: 1226px) {
+  .table-item-day-lecture {
+    width: 450px;
+  }
+  .table-item-day-lectures {
+    max-width: 962px;
+  }
+}
 /**************************/
 /* --------media queries --------- */
 /**************************/
@@ -201,7 +208,7 @@ a:focus {
 /**************************/
 /* --------media queries --------- */
 /**************************/
-@media (max-width: 600px) {
+@media (max-width: 1026px) {
   .table-item-day-lecture {
     width: 100%;
   }
