@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;900&display=swap");
+:root {
+  --color-green: rgb(12, 121, 56);
+  --color-yellow: #ffa507;
+  --color-gray: #e7eaef;
+  --color-gray-dark: #818181;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alexandria", sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* disable the highlight */
+}
+
+/* to prevent blue background form moblile */
+a:focus {
+  outline: none !important;
+}
+.flex-column,
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+/**************************/
+/* table */
+/**************************/
+.table {
+  background-image: url(img/back.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4rem 2rem;
+  gap: 2rem;
+
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+
+  /* width: 1200px; */
+}
+.table-item {
+  /* max-width: 1400px; */
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  /* display: inline-block; */
+}
+.table-item-day {
+  background: var(--color-green);
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: var(--color-white);
+  margin-right: 2rem;
+}
+.table-item-day-lectures {
+  border-radius: 1rem;
+  border: solid 3px var(--color-green);
+  padding: 1rem;
+  gap: 1.5rem;
+  /* width: 1300px; */
+  /* max-width: 1262px; */
+  /* width: auto; */
+  /* min-width: 400px; */
+  /* justify-content: flex-start; */
+  /* justify-content: space-around; */
+
+  flex-wrap: wrap;
+}
+.table-item-day-lecture {
+  border-radius: 1rem;
+  background: var(--color-white);
+  padding: 1.5rem 1rem;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+  width: 100%;
+}
+.table-item-day-lecture a {
+  font-size: 1.3rem;
+  color: var(--color-green);
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  /* -webkit-animation: text-shadow-drop-center 2s infinite both;
+  animation: text-shadow-drop-center 2s infinite both; */
+}
+.table-item-day-lecture a:hover {
+  transform: scale(1.1);
+}
+.table-item-day-lecture > p {
+  font-size: 1rem;
+  color: var(--color-gray-dark);
+  font-weight: 600;
+}
+.lecture-info p {
+  font-size: 1rem;
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.lecture-info {
+  gap: 2rem;
+}
+.lecture-info img {
+  width: 1.7rem;
+  background: var(--color-green);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.lecture-info-time,
+.lecture-info-place {
+  gap: 5px;
+}
+.lecture-info-time p {
+  position: relative;
+  z-index: 1;
+}
+.lecture-info-time p::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: var(--color-gray);
+  z-index: -1;
+  animation: bigger 2s infinite;
+}
+@-webkit-keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes bigger {
+  0% {
+    height: 10%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/**************************/
+/* --------media queries --------- */
+/**************************/
+@media (max-width: 1326px) {
+  /* .table-item-day-lecture {
+    width: 500px;
+  } */
+}
+
+/**************************/
+/* --------media queries --------- */
+/**************************/
+
+@media (max-width: 900px) {
+}
+/**************************/
+/* --------media queries --------- */
+/**************************/
+@media (max-width: 704px) {
+}
+/**************************/
+/* --------media queries --------- */
+/**************************/
+@media (max-width: 600px) {
+  .lecture-info {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
