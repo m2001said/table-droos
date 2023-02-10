@@ -124,6 +124,7 @@ a:focus {
 
 .lecture-info {
   gap: 2rem;
+  align-items: flex-start;
 }
 
 .lecture-info img {
@@ -137,7 +138,12 @@ a:focus {
 .lecture-info-place {
   gap: 5px;
 }
-
+.lecture-info-time {
+  flex: 1;
+}
+.lecture-info-place {
+  flex: 2;
+}
 .lecture-info-time p {
   position: relative;
   z-index: 1;
