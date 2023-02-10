@@ -54,15 +54,13 @@ a:focus {
   background-size: cover;
   padding: 4rem 2rem;
   gap: 2rem;
-  /* 10-2 */
-  align-items: flex-start;
 }
 /* 10-2 */
-.table-col-1,
+/* .table-col-1,
 .table-col-2 {
   gap: 2rem;
   width: 100%;
-}
+} */
 .table-item {
   /* align-items: flex-start; */
 
@@ -85,7 +83,8 @@ a:focus {
   border: solid 3px var(--color-green);
   padding: 1rem;
   gap: 1.5rem;
-  max-width: 650px;
+  max-width: 1200px;
+  /* width: 140%; */
   flex-wrap: wrap;
 }
 
@@ -95,7 +94,7 @@ a:focus {
   padding: 1.5rem 1rem;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
   gap: 1rem;
-  max-width: 600px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -156,6 +155,15 @@ a:focus {
   z-index: -1;
   animation: bigger 2s infinite;
 }
+.table-item-day-lecture a {
+  flex: 2;
+}
+.table-item-day-lecture p {
+  flex: 1;
+}
+.table-item-day-lecture .lecture-info {
+  flex: 2;
+}
 
 @-webkit-keyframes text-shadow-drop-center {
   0% {
@@ -214,15 +222,30 @@ a:focus {
 /* --------media queries --------- */
 /**************************/
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
+  .table-item-day-lecture {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  .table-item-day-lecture > p {
+    position: absolute;
+    bottom: 5px;
+    right: 15%;
+  }
 }
 
 /**************************/
 /* --------media queries --------- */
 /**************************/
 @media (max-width: 704px) {
-  .table {
+  .table-item-day-lecture {
+    padding-bottom: 1.5rem;
     flex-direction: column;
+  }
+  .table-item-day-lecture > p {
+    position: inherit;
+    bottom: 0;
+    right: 0;
   }
 }
 
